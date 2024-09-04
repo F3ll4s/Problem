@@ -71,6 +71,7 @@ fn main(){
                         item.2 = stock;
                     }else{
                         println!("Not Existing ID");
+                        continue;
                     }
                 }
             }

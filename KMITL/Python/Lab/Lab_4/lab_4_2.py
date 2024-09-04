@@ -1,5 +1,5 @@
 
-x = eval(input("Enter the number: "))
+x = input("Enter the number: ")
 
 if type(x) == int:
     z = int(input("Display in binary(0), octal(1), hexadecimal(2): "))

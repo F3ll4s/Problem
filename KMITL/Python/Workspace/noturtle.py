@@ -1,52 +1,213 @@
 from turtle import *
+days_in_month = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+day = [" Su","  Mo","  Tu","  We","  Th","  Fr","  Sa"]
 
-penup()
-goto(-350,-50)
-pendown()
-left(90)
-forward(100)
-right(145)
-forward(125)
-left(145)
-forward(100)
+speed(100)
+b = -700
+c = 350
+d = 0
+cday = 1
+skip = 1
+for f in range(1,4):
+    c -=  d + 50
+    sike = (f"Month # {f}")
+    print(sike)
+    if f == 3:
+        mok = 8
+    else:
+        mok = 7
+    for x in range(0,mok):
+        penup()
+        goto(b,c+(-25*x))
+        pendown()
+        d = 25*x
+        for y in range (0,7):
+            if x == 0:
+                write(sike)
+                for z in range(2):
+                    forward(175)
+                    left(90)
+                    forward(25)
+                    left(90)
+                break
+            elif x == 1:
+                write("  ")
+                write(day[y])
+                for i in range(4):
+                    forward(25)
+                    left(90)
+            elif  x >= 2:
+                for i in range(4):
+                    forward(25)
+                    left(90)
+                    
+                if skip > 0 :
+                    write(" ")
+                    skip -=1
+                elif cday <= days_in_month[f-1]:
+                    penup()
+                    forward(5)
+                    write(cday)
+                    back(5)
+                    pendown()
+                    cday += 1
+                    if cday > days_in_month[f-1]:
+                        cday = 1
+                        skip = 7
+            
+            forward(25)           
+    continue
 
-penup()
-goto(-225,-51)
-pendown()
-forward(100)
-penup()
+c = 350
+d = 0
+for f in range(4,7):
+    c -=  d + 50
+    sike = (f"Month # {f}")
+    print(sike)
+    if f == 6:
+        mok = 8
+    else:
+        mok = 7
+    for x in range(0,mok):
+        penup()
+        goto(b+200,c+(-25*x))
+        pendown()
+        d = 25*x
+        for y in range (0,7):
+            if x == 0:
+                write(sike)
+                for z in range(2):
+                    forward(175)
+                    left(90)
+                    forward(25)
+                    left(90)
+                break
+            elif x == 1:
+                write("  ")
+                write(day[y])
+                for i in range(4):
+                    forward(25)
+                    left(90)
+            elif  x >= 2:
+                for i in range(4):
+                    forward(25)
+                    left(90)
+                    
+                if skip > 0 :
+                    write(" ")
+                    skip -=1
+                elif cday <= days_in_month[f-1]:
+                    penup()
+                    forward(5)
+                    write(cday)
+                    back(5)
+                    pendown()
+                    cday += 1
+                    if cday > days_in_month[f-1]:
+                        cday = 1
+                        skip = 7
+            
+            forward(25)           
+    continue
 
+c = 350
+d = 0
+for f in range(7,10):
+    c -=  d + 50
+    sike = (f"Month # {f}")
+    print(sike)
+    if f == 9:
+        skip = 0
+    for x in range(0,7):
+        penup()
+        goto(b+400,c+(-25*x))
+        pendown()
+        d = 25*x
+        for y in range (0,7):
+            if x == 0:
+                write(sike)
+                for z in range(2):
+                    forward(175)
+                    left(90)
+                    forward(25)
+                    left(90)
+                break
+            elif x == 1:
+                write("  ")
+                write(day[y])
+                for i in range(4):
+                    forward(25)
+                    left(90)
+            elif  x >= 2:
+                for i in range(4):
+                    forward(25)
+                    left(90)
+                    
+                if skip > 0 :
+                    write(" ")
+                    skip -=1
+                elif cday <= days_in_month[f-1]:
+                    penup()
+                    forward(5)
+                    write(cday)
+                    back(5)
+                    pendown()
+                    cday += 1
+                    if cday > days_in_month[f-1]:
+                        cday = 1
+                        skip = 7
+            
+            forward(25)           
+    continue
 
-goto(-100,30)
-pendown()
-setheading(140)
-circle(50,270)
-setheading(90)
-forward(25)
-left(90)
-forward(25)
-penup()
-
-goto(25,30)
-pendown()
-setheading(140)
-circle(50,270)
-setheading(90)
-forward(25)
-left(90)
-forward(25)
-penup()
-
-goto(75,-50)
-pendown()
-setheading(70)
-forward(100)
-right(140)
-forward(50)
-setheading(180)
-forward(35)
-backward(35)
-setheading(290)
-forward(50)
-
-done()
+c = 350
+d = 0
+for f in range(10,13):
+    c -=  d + 50
+    sike = (f"Month # {f}")
+    print(sike)
+    if f == 12:
+        skip = 0
+    for x in range(0,7):
+        penup()
+        goto(b+600,c+(-25*x))
+        pendown()
+        d = 25*x
+        for y in range (0,7):
+            if x == 0:
+                write(sike)
+                for z in range(2):
+                    forward(175)
+                    left(90)
+                    forward(25)
+                    left(90)
+                break
+            elif x == 1:
+                write("  ")
+                write(day[y])
+                for i in range(4):
+                    forward(25)
+                    left(90)
+            elif  x >= 2:
+                for i in range(4):
+                    forward(25)
+                    left(90)
+                    
+                if skip > 0 :
+                    write(" ")
+                    skip -=1
+                elif cday <= days_in_month[f-1]:
+                    penup()
+                    forward(5)
+                    write(cday)
+                    back(5)
+                    pendown()
+                    cday += 1
+                    if cday > days_in_month[f-1]:
+                        cday = 1
+                        skip = 7
+            
+            forward(25)           
+    continue
+               
+exitonclick()
