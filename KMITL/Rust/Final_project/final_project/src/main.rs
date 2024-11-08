@@ -18,6 +18,9 @@ enum Message {
 
 #[derive(Serialize)]
 struct SystemData {
+    host_name: String,
+    system_name: String,
+    system_version: String,
     cpu_usage: f32,
     memory_used: u64,
     memory_total: u64,
@@ -29,6 +32,9 @@ struct SystemData {
 }
 
 struct SystemMonitorApp {
+    host_name: String,
+    system_name: String,
+    system_version: String,
     cpu_usage: f32,
     memory_used: u64,
     memory_total: u64,
@@ -42,6 +48,9 @@ struct SystemMonitorApp {
 
 impl SystemMonitorApp {
     fn get_system_metrics(&mut self) {
+        self.host_name = self.system.host_name().unwrap_or_default();
+        self.system_name = self.system.name().unwrap_or_default();
+        self.system_version = self.system.os_version().unwrap_or_default();
         self.system.refresh_all();
         self.cpu_usage = self.system.global_cpu_info().cpu_usage();
         self.memory_used = self.system.used_memory();
@@ -58,6 +67,9 @@ impl SystemMonitorApp {
 
     fn log_to_csv(&mut self) {
         let data = SystemData {
+            host_name: self.host_name.clone(),
+            system_name: self.system_name.clone(),
+            system_version: self.system_version.clone(),
             cpu_usage: self.cpu_usage,
             memory_used: self.memory_used,
             memory_total: self.memory_total,
@@ -77,7 +89,7 @@ impl SystemMonitorApp {
 impl Application for SystemMonitorApp {
     type Executor = executor::Default;
     type Message = Message;
-    type Theme = iced::theme::Theme; // Add this line
+    type Theme = iced::theme::Theme; 
     type Flags = ();
 
     fn new(_flags: Self::Flags) -> (Self, Command<Self::Message>) {
@@ -97,6 +109,9 @@ impl Application for SystemMonitorApp {
         let writer = Writer::from_writer(file);
 
         let mut app = SystemMonitorApp {
+            host_name: String::new(),
+            system_name: String::new(),
+            system_version: String::new(),
             cpu_usage,
             memory_used,
             memory_total,
@@ -127,6 +142,8 @@ impl Application for SystemMonitorApp {
     }
 
     fn view(&self) -> Element<Self::Message> {
+        let host_name_text = format!("Host Name: {}", self.host_name);
+        let system_name_text = format!("System Name: {} {}", self.system_name, self.system_version);
         let cpu_text = format!("CPU Usage: {:.2}%", self.cpu_usage);
         let memory_text = format!(
             "Memory Usage: {}/{} MB",
@@ -147,6 +164,9 @@ impl Application for SystemMonitorApp {
         Column::new()
             .padding(20)
             .spacing(10)
+            .push(Text::new("System Monitor").size(50))
+            .push(Text::new(host_name_text))
+            .push(Text::new(system_name_text))
             .push(Text::new(cpu_text))
             .push(Text::new(memory_text))
             .push(Text::new(disk_text))
