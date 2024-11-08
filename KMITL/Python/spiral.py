@@ -23,5 +23,5 @@ def spiral_sq(s):
 
 # Example usage
 turtle.speed(1)  # Fastest drawing speed
-spiral_sq(150)
+spiral_sq(150) 
 turtle.done()

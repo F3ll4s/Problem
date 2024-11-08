@@ -1,0 +1,11 @@
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Lab\Lab_10\rust_iced\target\debug\deps\liblibc-0b9b6ddeb25c1104.rmeta: C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src/lib.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\macros.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\fixed_width_ints.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\windows\mod.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\windows\msvc\mod.rs
+
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Lab\Lab_10\rust_iced\target\debug\deps\liblibc-0b9b6ddeb25c1104.rlib: C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src/lib.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\macros.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\fixed_width_ints.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\windows\mod.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\windows\msvc\mod.rs
+
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Lab\Lab_10\rust_iced\target\debug\deps\libc-0b9b6ddeb25c1104.d: C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src/lib.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\macros.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\fixed_width_ints.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\windows\mod.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\windows\msvc\mod.rs
+
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src/lib.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\macros.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\fixed_width_ints.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\windows\mod.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libc-0.2.158\src\windows\msvc\mod.rs:

@@ -26,8 +26,7 @@ fn main(){
         [10,11,12],
         [13,14,15],
     ];
-
-
+    
     println!("Matrix 1: {:?}" ,a);
     println!("Matrix 2: {:?}", b);
 

@@ -1,0 +1,10 @@
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Lab\Lab_10\Lab_10_2\target\debug\deps\libowned_ttf_parser-be42c61a34cb8539.rmeta: C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\lib.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\convert.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\owned.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\preparse.rs
+
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Lab\Lab_10\Lab_10_2\target\debug\deps\libowned_ttf_parser-be42c61a34cb8539.rlib: C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\lib.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\convert.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\owned.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\preparse.rs
+
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Lab\Lab_10\Lab_10_2\target\debug\deps\owned_ttf_parser-be42c61a34cb8539.d: C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\lib.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\convert.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\owned.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\preparse.rs
+
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\lib.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\convert.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\owned.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.24.0\src\preparse.rs:

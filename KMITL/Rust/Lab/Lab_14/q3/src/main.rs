@@ -1,0 +1,59 @@
+use std::thread;
+use std::sync::mpsc;
+use std::time::Instant;
+use rand::Rng;
+
+fn split_vector(numbers:&Vec<u32>,num_parts:usize) -> Vec<Vec<u32>> {
+    let len = numbers.len();
+    let part_size = len/num_parts;
+    let mut  parts = Vec::with_capacity(num_parts);
+
+    for i in 0..num_parts{
+        let start = i * part_size;
+        let end = if i == num_parts-1 {len }else { (i+1)*part_size};
+        parts.push(numbers[start..end].to_vec());
+    }
+    parts
+
+}
+
+fn main() {
+    let numbers: Vec<u32> = (0..1_000_000)
+        .map(|_| rand::thread_rng().gen_range(1..=100))
+        .collect();
+
+    println!("Multi-threaded");
+    let start_multi = Instant::now();
+    let parts = split_vector(&numbers,10);
+    let (tx,rx) = mpsc::channel();
+
+    let handles:Vec<_> = parts
+        .into_iter()
+        .map(|part|{
+            let tx = tx.clone();
+            thread::spawn(move||{
+                let sum_of_squares:u64 = part.iter().map(|&x| x as u64 * x as u64).sum();
+                tx.send(sum_of_squares).unwrap();
+            })
+        })
+        .collect();
+    drop(tx);
+
+        let multi_treaded_sum:u64 = rx.iter().sum();
+
+        for handle in handles{
+            handle.join().unwrap();
+        }
+        let duration_multi = start_multi.elapsed();
+
+        println!("Multi-threaded of squares: {}",multi_treaded_sum);
+        println!("Multi-threaded time taken: {:?}\n",duration_multi);
+
+        println!("Single-threaded");
+        let start_single = Instant::now();
+        let single_threaded_sum:u64 = numbers.iter().map(|&x|x as u64 * x as u64).sum();
+        let duration_single = start_single.elapsed();
+
+        println!("Single-threaded sum of square: {}",single_threaded_sum);
+        println!("Sinlge-threaded time taken: {:?}",duration_single);
+    }

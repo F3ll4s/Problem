@@ -1,19 +1,15 @@
 use std::fmt;
-struct DataStore<T> {
-    //struct vector 
+struct DataStore<T> { 
     items: Vec<T>,
 }
 
 impl <T> DataStore<T> {
-    //Add item to store
-
     fn new() -> Self {
         DataStore { items: (Vec::new()) }
     }
 
     fn add_item(&mut self, item:T){
         self.items.push(item);
-
     }
 
     fn remove_item(&mut self, index: usize) -> Option<T>{
