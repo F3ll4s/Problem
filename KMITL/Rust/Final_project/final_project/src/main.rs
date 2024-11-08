@@ -147,8 +147,8 @@ impl Application for SystemMonitorApp {
         let cpu_text = format!("CPU Usage: {:.2}%", self.cpu_usage);
         let memory_text = format!(
             "Memory Usage: {}/{} MB",
-            self.memory_used / 1024,
-            self.memory_total / 1024
+            self.memory_used / (1024 * 1024),
+            self.memory_total / (1024 * 1024)
         );
         let disk_text = format!(
             "Disk Usage: {}/{} GB",
