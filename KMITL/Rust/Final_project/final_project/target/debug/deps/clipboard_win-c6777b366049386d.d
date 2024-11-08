@@ -1,0 +1,10 @@
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Final_project\final_project\target\debug\deps\libclipboard_win-c6777b366049386d.rmeta: C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\lib.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\formats.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\raw.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\utils.rs
+
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Final_project\final_project\target\debug\deps\libclipboard_win-c6777b366049386d.rlib: C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\lib.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\formats.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\raw.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\utils.rs
+
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Final_project\final_project\target\debug\deps\clipboard_win-c6777b366049386d.d: C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\lib.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\formats.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\raw.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\utils.rs
+
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\lib.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\formats.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\raw.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-4.5.0\src\utils.rs:

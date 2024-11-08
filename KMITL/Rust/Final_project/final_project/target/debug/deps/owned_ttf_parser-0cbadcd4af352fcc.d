@@ -1,0 +1,10 @@
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Final_project\final_project\target\debug\deps\libowned_ttf_parser-0cbadcd4af352fcc.rmeta: C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src/lib.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src\convert.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src\owned.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src\preparse.rs
+
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Final_project\final_project\target\debug\deps\libowned_ttf_parser-0cbadcd4af352fcc.rlib: C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src/lib.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src\convert.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src\owned.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src\preparse.rs
+
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Final_project\final_project\target\debug\deps\owned_ttf_parser-0cbadcd4af352fcc.d: C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src/lib.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src\convert.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src\owned.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src\preparse.rs
+
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src/lib.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src\convert.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src\owned.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\owned_ttf_parser-0.25.0\src\preparse.rs:

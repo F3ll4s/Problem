@@ -1,0 +1,1 @@
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Final_project\final_project\target\debug\system_monitor.exe: C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Final_project\final_project\src\main.rs

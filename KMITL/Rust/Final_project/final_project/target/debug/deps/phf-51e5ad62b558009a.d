@@ -1,0 +1,11 @@
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Final_project\final_project\target\debug\deps\libphf-51e5ad62b558009a.rmeta: C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src/lib.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\map.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\ordered_map.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\ordered_set.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\set.rs
+
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Final_project\final_project\target\debug\deps\libphf-51e5ad62b558009a.rlib: C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src/lib.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\map.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\ordered_map.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\ordered_set.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\set.rs
+
+C:\Users\ASUS\Documents\GitHub\Problem\KMITL\Rust\Final_project\final_project\target\debug\deps\phf-51e5ad62b558009a.d: C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src/lib.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\map.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\ordered_map.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\ordered_set.rs C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\set.rs
+
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src/lib.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\map.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\ordered_map.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\ordered_set.rs:
+C:\Users\ASUS\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf-0.11.2\src\set.rs:
