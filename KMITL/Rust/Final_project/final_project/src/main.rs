@@ -163,7 +163,7 @@ impl Application for SystemMonitorApp {
 
         Column::new()
             .padding(20)
-            .spacing(10)
+            .spacing(15)
             .push(Text::new("System Monitor").size(50))
             .push(Text::new(host_name_text))
             .push(Text::new(system_name_text))
