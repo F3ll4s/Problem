@@ -46,12 +46,12 @@ class App(ctk.CTk):
         bold_font = ctk.CTkFont(family="Arial", size=24, weight="bold")
         label = ctk.CTkLabel(signup_window, text="Register Page", font=bold_font)
         label.pack(pady=(100,0)) 
-        signup_username = ctk.CTkLabel(signup_window, text="Username", font=("Arial", 16))
-        signup_username_key = ctk.CTkEntry(signup_window, font=("Arial", 16))
-        signup_password = ctk.CTkLabel(signup_window, text="Password", font=("Arial", 16))
-        signup_password_key = ctk.CTkEntry(signup_window, font=("Arial", 16))
-        signup_password2 = ctk.CTkLabel(signup_window, text="Confirm Password", font=("Arial", 16))
-        signup_password2_key = ctk.CTkEntry(signup_window, font=("Arial", 16))
+        signup_username = ctk.CTkLabel(signup_window, text="Username", font=normal_font)
+        signup_username_key = ctk.CTkEntry(signup_window, font=normal_font)
+        signup_password = ctk.CTkLabel(signup_window, text="Password", font=normal_font)
+        signup_password_key = ctk.CTkEntry(signup_window, font=normal_font)
+        signup_password2 = ctk.CTkLabel(signup_window, text="Confirm Password", font=normal_font)
+        signup_password2_key = ctk.CTkEntry(signup_window, font=normal_font)
         signup_username.pack(anchor="w",padx=175,pady=(25,0))
         signup_username_key.pack(pady=(5,0))
         
@@ -59,7 +59,7 @@ class App(ctk.CTk):
         signup_password_key.pack(pady=(5,0))
         signup_password2.pack(anchor="w",padx=175,pady=(10,0))
         signup_password2_key.pack(pady=(5,0))
-        button = ctk.CTkButton(signup_window, text="Register",font=("Arial", 16)) 
+        button = ctk.CTkButton(signup_window, text="Register",font=normal_font) 
         button.pack(pady=(40,0))
 
         
@@ -101,13 +101,13 @@ class App(ctk.CTk):
         entry_frame = ctk.CTkFrame(cd)
         entry_frame.pack(pady=(20, 0))  
 
-        hours_entry = ctk.CTkEntry(entry_frame, placeholder_text="Hours", font=("Arial", 14), width=80)
+        hours_entry = ctk.CTkEntry(entry_frame, placeholder_text="Hours", font=normal_font, width=80)
         hours_entry.pack(side="left", padx=(10, 5))  
 
-        minutes_entry = ctk.CTkEntry(entry_frame, placeholder_text="Minutes", font=("Arial", 14), width=80)
+        minutes_entry = ctk.CTkEntry(entry_frame, placeholder_text="Minutes", font=normal_font, width=80)
         minutes_entry.pack(side="left", padx=5)
 
-        seconds_entry = ctk.CTkEntry(entry_frame, placeholder_text="Seconds", font=("Arial", 14), width=80)
+        seconds_entry = ctk.CTkEntry(entry_frame, placeholder_text="Seconds", font=normal_font, width=80)
         seconds_entry.pack(side="left", padx=(5, 10))
 
         timer_label = ctk.CTkLabel(cd, text="00:00:00", font=("Arial", 35, "bold"), text_color="white")
@@ -159,16 +159,16 @@ class App(ctk.CTk):
             stop_timer()
             cd_time = 0
             timer_label.configure(text="00:00:00")
-        start_button = ctk.CTkButton(cd, text="Start", font=("Arial", 14), command=set_timer, height=30, width=90)
+        start_button = ctk.CTkButton(cd, text="Start", font=normal_font, command=set_timer, height=30, width=90)
         start_button.pack(pady=(10, 0))
 
-        continue_button = ctk.CTkButton(cd, text="Continue", font=("Arial", 14), command=continue_timer, height=30, width=90)
+        continue_button = ctk.CTkButton(cd, text="Continue", font=normal_font, command=continue_timer, height=30, width=90)
         continue_button.pack(pady=(10, 0))
 
-        stop_button = ctk.CTkButton(cd, text="Stop", font=("Arial", 14), command=stop_timer, height=30, width=90)
+        stop_button = ctk.CTkButton(cd, text="Stop", font=normal_font, command=stop_timer, height=30, width=90)
         stop_button.pack(pady=(10, 0))
 
-        reset_button = ctk.CTkButton(cd, text="Reset", font=("Arial", 14), command=reset_timer, height=30, width=90)
+        reset_button = ctk.CTkButton(cd, text="Reset", font=normal_font, command=reset_timer, height=30, width=90)
         reset_button.pack(pady=(10, 0))
         
     def main_page(self):
@@ -220,7 +220,7 @@ class App(ctk.CTk):
         note_button = ctk.CTkButton(frame, image=note, text="", command=lambda: print("Note button clicked"))
         note_button.grid(row=0, column=2, padx=20, pady=20)
         
-        todolist_button = ctk.CTkButton(frame, image=todolist, text="", command=lambda: print("Todolist button clicked"))
+        todolist_button = ctk.CTkButton(frame, image=todolist, text="", command= self.todolist_page)
         todolist_button.grid(row=1, column=0, padx=20, pady=20)
 
         calendar_button = ctk.CTkButton(frame, image=calendar, text="", command=lambda: ctk.set_appearance_mode("light"))
@@ -233,9 +233,9 @@ class App(ctk.CTk):
         settings_window.lift()  
         settings_window.focus_force()  
         settings_window.attributes('-topmost', True)
-        topic = ctk.CTkLabel(settings_window, text="Settings", font=("Arial", 24, "bold"))
+        topic = ctk.CTkLabel(settings_window, text="Settings", font=bold_font)
         topic.pack(pady=(20, 0))
-        theme_label = ctk.CTkLabel(settings_window, text="Select Theme:", font=("Arial", 16))
+        theme_label = ctk.CTkLabel(settings_window, text="Select Theme:", font=normal_font)
         theme_label.pack(pady=(20, 5))
         theme_option = ctk.CTkOptionMenu(settings_window, values=["Dark", "Light"])
         theme_option.pack(pady=10)
@@ -250,6 +250,116 @@ class App(ctk.CTk):
         
         close_button = ctk.CTkButton(settings_window, text="Close", command=settings_window.destroy)
         close_button.pack(pady=20)
+        
+    def todolist_page(self):
+        todo_add = ctk.CTkToplevel()
+        todo_add.geometry("500x500")
+        todo_add.title("To-Do List with Checklist")
+        global tasks, task_frame
+        tasks = []
+        
+        def open_add_task_window():
+            todo_add = ctk.CTkToplevel()
+            todo_add.geometry("400x500")
+            todo_add.title("Add Task")
+            todo_add.lift()  
+            todo_add.focus_force()  
+            todo_add.attributes('-topmost', True) 
+            font = ctk.CTkFont(family="Arial", size=16)
+            times = [
+                "0:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00", "7:00",
+                "8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00",
+                "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"
+            ]
+
+            todo_add_label = ctk.CTkLabel(todo_add, text="Add Task", font=ctk.CTkFont(family="Arial", size=24, weight="bold"))
+            todo_add_label.pack(pady=20)
+            task_label = ctk.CTkLabel(todo_add, text="Task:", font=font)
+            task_label.pack(anchor="w", padx=20, pady=(20, 0))
+            task_entry = ctk.CTkEntry(todo_add, font=font,placeholder_text="Enter a new task")
+            task_entry.pack(pady=5, padx=20, fill="x")
+
+            due_date_label = ctk.CTkLabel(todo_add, text="Due Date:", font=font)
+            due_date_label.pack(anchor="w", padx=20, pady=(10, 0))
+            due_date_entry = ctk.CTkEntry(todo_add, font=font,placeholder_text="Enter the due date")
+            due_date_entry.pack(pady=5, padx=20, fill="x")
+
+            time_label = ctk.CTkLabel(todo_add, text="Time:", font=font)
+            time_label.pack(anchor="w", padx=20, pady=(10, 0))
+            time_entry = ctk.CTkOptionMenu(todo_add, values = times ,font=font)
+            time_entry.pack(pady=5, padx=20, fill="x")
+
+            difficulty_label = ctk.CTkLabel(todo_add, text="Difficulty:", font=font)
+            difficulty_label.pack(anchor="w", padx=20, pady=(10, 0))
+            difficulty_option = ctk.CTkOptionMenu(todo_add, values=["Easy (10-20 minutes)", "Medium (1-3 hours)", "Hard (12+ hours)"], font=font)
+            difficulty_option.pack(pady=5, padx=20,fill="x")
+
+            button_add = ctk.CTkButton(todo_add, text="Add Task", font=font, command=lambda: add_task(
+                task_entry, due_date_entry.get(), time_entry.get(), difficulty_option.get(), todo_add
+            ))
+            button_add.pack(pady=40)
+
+        def add_task(task_entry, due_date, time, difficulty, window):
+            task_text = task_entry.get()
+            global tasks, task_frame
+            if task_text:
+                window.destroy()
+                
+                task_item_frame = ctk.CTkFrame(task_frame)
+                task_item_frame.pack(fill="x", pady=5, padx=10)
+
+                task_var = ctk.BooleanVar()
+                task_checkbox = ctk.CTkCheckBox(task_item_frame, text=task_text, variable=task_var)
+                task_checkbox.pack(side="left")
+
+                view_button = ctk.CTkButton(task_item_frame, text="View", command=lambda: view_task(task_text, due_date, time, difficulty))
+                view_button.pack(side="right")
+
+                tasks.append({"text": task_text, "due_date": due_date, "time": time, "difficulty": difficulty, "var": task_var, "frame": task_frame})
+
+        def view_task(task_text, due_date, time, difficulty):
+            global tasks
+            details_window = ctk.CTkToplevel()
+            details_window.geometry("300x200")
+            details_window.title("Task Details")
+            details_window.lift()  
+            details_window.focus_force()  
+            details_window.attributes('-topmost', True) 
+            font = ctk.CTkFont(family="Arial", size=14)
+
+            ctk.CTkLabel(details_window, text=f"Task: {task_text}", font=font).pack(pady=10)
+            ctk.CTkLabel(details_window, text=f"Due Date: {due_date}", font=font).pack(pady=10)
+            ctk.CTkLabel(details_window, text=f"Time: {time}", font=font).pack(pady=10)
+            ctk.CTkLabel(details_window, text=f"Difficulty: {difficulty}", font=font).pack(pady=10)
+
+        def delete_task():
+            global tasks
+            for task in tasks:
+                if task["var"].get():  
+                    task["frame"].destroy()  
+
+            new_tasks = []
+            for task in tasks:
+                if task["var"].get():
+                    task["frame"].destroy()
+                else:
+                    new_tasks.append(task)
+                    
+            tasks = new_tasks
+
+        bold_font = ctk.CTkFont(family="Arial", size=24, weight="bold")
+        label = ctk.CTkLabel(todo_add, text="My To-Do List", font=bold_font)
+        label.pack(pady=(20, 10))
+
+        task_frame = ctk.CTkFrame(todo_add)
+        task_frame.pack(pady=(10, 10), fill="both", expand=True)
+
+        add_button = ctk.CTkButton(todo_add, text="Add Task", command=open_add_task_window)
+        add_button.pack(pady=10)
+
+        delete_button = ctk.CTkButton(todo_add, text="Delete Selected", command=delete_task)
+        delete_button.pack(pady=10)
+
     
         
 app = App()

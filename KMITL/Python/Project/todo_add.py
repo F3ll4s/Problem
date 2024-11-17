@@ -1,6 +1,6 @@
 import customtkinter as ctk
 
-todo_add = ctk.CTk()
+todo_add = ctk.CTkToplevel()
 todo_add.geometry("500x600")
 todo_add.title("To-Do List")
 
@@ -18,7 +18,7 @@ due_date_label.pack(anchor="w", padx=175, pady=(25, 0))
 due_date_entry = ctk.CTkEntry(todo_add, placeholder_text="Enter the due date",font=font,width=150)
 due_date_entry.pack(pady=5)
 
-time_label = ctk.CTkLabel(todo_add, text="Time:",font=font)
+time_label = ctk.CTkLabel(todo_add, text="Time:",font=font)                                                                
 time_label.pack(anchor="w", padx=175, pady=(25, 0))
 time_entry = ctk.CTkEntry(todo_add, placeholder_text="Enter the time",font=font,width=150)
 time_entry.pack(pady=5)

@@ -6,63 +6,107 @@ class App(ctk.CTk):
         self.geometry("500x500")
         self.title("To-Do List with Checklist")
 
-        # Header
         bold_font = ctk.CTkFont(family="Arial", size=24, weight="bold")
         label = ctk.CTkLabel(self, text="My To-Do List", font=bold_font)
         label.pack(pady=(20, 10))
 
-        # Frame for the task list
         self.task_frame = ctk.CTkFrame(self)
         self.task_frame.pack(pady=(10, 10), fill="both", expand=True)
 
-        # Entry and Add button
-        self.task_entry = ctk.CTkEntry(self, placeholder_text="Enter a new task")
-        self.task_entry.pack(pady=(10, 0), fill="x", padx=20)
-
-        add_button = ctk.CTkButton(self, text="Add Task", command=self.add_task)
+        add_button = ctk.CTkButton(self, text="Add Task", command=self.open_add_task_window)
         add_button.pack(pady=10)
 
-        # Button for deleting tasks
         delete_button = ctk.CTkButton(self, text="Delete Selected", command=self.delete_task)
         delete_button.pack(pady=10)
 
-        # List to store tasks (each as a tuple of text, checkbox variable, and task frame)
         self.tasks = []
 
-    def add_task(self):
-        task_text = self.task_entry.get()
+    def open_add_task_window(self):
+        todo_add = ctk.CTkToplevel(self)
+        todo_add.geometry("400x500")
+        todo_add.title("Add Task")
+        todo_add.lift()  
+        todo_add.focus_force()  
+        todo_add.attributes('-topmost', True) 
+        font = ctk.CTkFont(family="Arial", size=16)
+        times = [
+            "0:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00", "7:00",
+            "8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00",
+            "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"
+        ]
+
+        todo_add_label = ctk.CTkLabel(todo_add, text="Add Task", font=ctk.CTkFont(family="Arial", size=24, weight="bold"))
+        todo_add_label.pack(pady=20)
+        task_label = ctk.CTkLabel(todo_add, text="Task:", font=font)
+        task_label.pack(anchor="w", padx=20, pady=(20, 0))
+        task_entry = ctk.CTkEntry(todo_add, font=font,placeholder_text="Enter a new task")
+        task_entry.pack(pady=5, padx=20, fill="x")
+
+        due_date_label = ctk.CTkLabel(todo_add, text="Due Date:", font=font)
+        due_date_label.pack(anchor="w", padx=20, pady=(10, 0))
+        due_date_entry = ctk.CTkEntry(todo_add, font=font,placeholder_text="Enter the due date")
+        due_date_entry.pack(pady=5, padx=20, fill="x")
+
+        time_label = ctk.CTkLabel(todo_add, text="Time:", font=font)
+        time_label.pack(anchor="w", padx=20, pady=(10, 0))
+        time_entry = ctk.CTkOptionMenu(todo_add, values = times ,font=font)
+        time_entry.pack(pady=5, padx=20, fill="x")
+
+        difficulty_label = ctk.CTkLabel(todo_add, text="Difficulty:", font=font)
+        difficulty_label.pack(anchor="w", padx=20, pady=(10, 0))
+        difficulty_option = ctk.CTkOptionMenu(todo_add, values=["Easy (10-20 minutes)", "Medium (1-3 hours)", "Hard (12+ hours)"], font=font)
+        difficulty_option.pack(pady=5, padx=20,fill="x")
+
+        button_add = ctk.CTkButton(todo_add, text="Add Task", font=font, command=lambda: self.add_task(
+            task_entry, due_date_entry.get(), time_entry.get(), difficulty_option.get(), todo_add
+        ))
+        button_add.pack(pady=40)
+
+    def add_task(self, task_entry, due_date, time, difficulty, window):
+        task_text = task_entry.get()
         if task_text:
-            # Create a frame for each task with a checkbox and a "View" button
+            window.destroy()
+            
             task_frame = ctk.CTkFrame(self.task_frame)
             task_frame.pack(fill="x", pady=5, padx=10)
 
-            # Checkbox for the task
             task_var = ctk.BooleanVar()
             task_checkbox = ctk.CTkCheckBox(task_frame, text=task_text, variable=task_var)
             task_checkbox.pack(side="left")
 
-            # "View" button for the task
-            view_button = ctk.CTkButton(task_frame, text="View", command=lambda t=task_text: self.view_task(t))
+            view_button = ctk.CTkButton(task_frame, text="View", command=lambda: self.view_task(task_text, due_date, time, difficulty))
             view_button.pack(side="right")
 
-            # Add task to the list
-            self.tasks.append((task_text, task_var, task_frame))
-            self.task_entry.delete(0, "end")
+            self.tasks.append({"text": task_text, "due_date": due_date, "time": time, "difficulty": difficulty, "var": task_var, "frame": task_frame})
+
+    def view_task(self, task_text, due_date, time, difficulty):
+        
+        details_window = ctk.CTkToplevel(self)
+        details_window.geometry("300x200")
+        details_window.title("Task Details")
+        details_window.lift()  
+        details_window.focus_force()  
+        details_window.attributes('-topmost', True) 
+        font = ctk.CTkFont(family="Arial", size=14)
+
+        ctk.CTkLabel(details_window, text=f"Task: {task_text}", font=font).pack(pady=10)
+        ctk.CTkLabel(details_window, text=f"Due Date: {due_date}", font=font).pack(pady=10)
+        ctk.CTkLabel(details_window, text=f"Time: {time}", font=font).pack(pady=10)
+        ctk.CTkLabel(details_window, text=f"Difficulty: {difficulty}", font=font).pack(pady=10)
 
     def delete_task(self):
-        # Remove completed tasks from the list
-        for task_text, task_var, task_frame in self.tasks:
-            if task_var.get():  # If the checkbox is checked
-                task_frame.destroy()  # Remove the task frame from the UI
+        for task in self.tasks:
+            if task["var"].get():  
+                task["frame"].destroy()  
 
-        # Update the task list to remove deleted tasks
-        self.tasks = [task for task in self.tasks if not task[1].get()]
-
-    def view_task(self, task_text):
-        # Function to display more information about the task
-        # This can be customized to show a pop-up or perform any action
-        print(f"Viewing task: {task_text}")
-        ctk.CTkMessageBox.show_info("Task Info", f"Task: {task_text}")
+        new_tasks = []
+        for task in self.tasks:
+            if task["var"].get():
+                task["frame"].destroy()
+            else:
+                new_tasks.append(task)
+                
+        self.tasks = new_tasks
 
 app = App()
 app.mainloop()
